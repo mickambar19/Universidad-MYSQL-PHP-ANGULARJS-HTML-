@@ -4,7 +4,7 @@ $servidor 	= "";
 $usuario 	= "";
 $contraseña = "";
 $db 		= "";
-$result 	= new mysqli('localhost','root','bubu1995','dbUniversidad');
+$result 	= new mysqli('localhost','LosChingones','12345','dbUniversidad');
 if(mysqli_connect_errno())
 {
 	printf("La conexion a base de datos a fallado %s\n", mysqli_connect_errno());

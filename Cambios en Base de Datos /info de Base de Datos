@@ -1,0 +1,11 @@
+ Para que pueda conectarse bien a la base de datos es necesario crear
+ 
+ Usuario = "LosChingones"
+ Password = "12345"
+ 
+  y el servidor es local 
+ 
+ Tambien les dejo el archivo a importar 
+ llamado dbUniversidad.sql
+ 
+ 

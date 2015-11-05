@@ -1,5 +1,5 @@
 <?php 
-$db        = new mysqli ('localhost','root','bubu1995','dbUniversidad');
+$db        = new mysqli ('localhost','LosChingones','12345','dbUniversidad');
 $comando="INSERT INTO `Empleado`(`Nombre`, `Nss`, `Tipo`) 
 VALUES ('".$_POST['Nombre']."','".$_POST['Nss']."','".$_POST['Tipo']."')";
 if(mysqli_connect_errno())
