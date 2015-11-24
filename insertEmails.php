@@ -1,7 +1,6 @@
 <?php 
 $db        = new mysqli ('localhost' ,'mickalex_MaBaseD' ,'LosChingones1234',' mickalex_dbUniversidad');
-$comando="INSERT INTO `Empleado`(`Nombre`, `Nss`, `IdTipoE`) 
-VALUES ('".$_POST['Nombre']."','".$_POST['Nss']."',".$_POST['Tipo'].")";
+$comando="INSERT INTO `Email`(`IdEmpleadoE`, `Correo`) VALUES ('".$_GET['idEmpleadoBuscado']."','".$_GET['nuevoEmail']."')";
 if(mysqli_connect_errno())
 {
 	printf("La conexion a base de datos a fallado %s\n",mysqli_connect_errno());
@@ -14,6 +13,7 @@ else
 {
 	echo "Error.";
 	echo mysqli_sqlstate($db);
+	
 }
 $db->close();
 ?>

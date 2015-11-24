@@ -697,10 +697,10 @@ Parallax
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #28c3ab;
+    border: 1px solid #67B0D1;
     outline: 0;
-    color: #000;
-    background-color: #28c3ab;
+    color: white;
+    background-color: #67B0D1;
 }
 
 .btn-huge {
@@ -796,4 +796,47 @@ Parallax
 }
 .secActiva h5{
   color:white;
+}
+.botonEnForm{
+  border-radius: 10%;
+}
+.botonEnForm:hover{
+  background-color:#67B0D1;
+  color:white;
+  border-radius: 10%;
+}
+.container.form1{
+  margin-top:12%;
+}
+
+.row.tabla1{
+  margin-bottom: 6%;
+}
+thead > tr > *{
+  text-align: center;
+}
+#list-emails>*{
+  list-style-type:none;
+  margin: 5px;
+}
+#myErrorModal > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(207, 44, 44, 0.9);
+    color: white;
+}
+#myModal > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+{
+   -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(13, 126, 54, 0.9);
+    color: white;
 }

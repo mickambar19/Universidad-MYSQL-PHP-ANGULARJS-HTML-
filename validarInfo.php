@@ -1,19 +1,25 @@
 <?php
-$data = file_get_contents("php://input");
+$data=file_get_contents("php://input");
 
-$objData = json_decode($data);
 
-$mysqli = new mysqli("localhost", "root", "bubu1995", "dbUniversidad");
+
+$mysqli = new mysqli("localhost", "mickalex_MaBaseD", " LosChingones1234", " mickalex_dbUniversidad");
 if ($mysqli->connect_errno) {
     echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
-$User      = $objData->usuario;
-$Password  = $objData->password;
-//$User      = json_decode($_POST['Usuario']);
+//$User      = $objData->usuario;
+//$Password  = $objData->password;
+//$User      = json_decode($_POST['usuario']);
 //$Password  = json_decode($_POST['Password']);
+$User      = $_POST['usuario'];
+//echo $_POST['usuario'];
+//echo $User;
+$Password  = $_POST['password'];
+//echo $_POST['password'];
+//echo $Password;
 $resultado = $mysqli->query("SELECT * FROM SuperUsuarios WHERE Usuario ='".$User."'ORDER BY idSuperUsuario ASC");
-$loginURL  = "http://localhost/html/BasesDatostratahttpPost/index.html";
-$homeURL   = "http://localhost/html/BasesDatostratahttpPost/home.html";
+$loginURL  = "https://inoveloper.com/ProUni/index.html";
+$homeURL   = "https://inoveloper.com/ProUni/home.html";
 $valido    = false;
 for ($num_fila = $resultado->num_rows - 1; $num_fila >= 0; $num_fila--) {
     $resultado->data_seek($num_fila);

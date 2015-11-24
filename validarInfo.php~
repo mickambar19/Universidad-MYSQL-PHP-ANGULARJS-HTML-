@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "bubu1995", "dbUniversidad");
+$mysqli = new mysqli("localhost", "mickalex_MaBaseD", " LosChingones1234", " mickalex_dbUniversidad");
 if ($mysqli->connect_errno) {
     echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
@@ -8,8 +8,8 @@ $Password  = '123425';
 //$User      = json_decode($_POST['Usuario']);
 //$Password  = json_decode($_POST['Password']);
 $resultado = $mysqli->query("SELECT * FROM SuperUsuarios WHERE Usuario ='".$User."'ORDER BY idSuperUsuario ASC");
-$loginURL  = "http://localhost/html/BasesDatos/index.html";
-$homeURL   = "http://localhost/html/BasesDatos/home.html";
+$loginURL  = "https://inoveloper.com/ProUni/index.html";
+$homeURL   = "https://inoveloper.com/ProUni/home.html";
 $valido    = false;
 for ($num_fila = $resultado->num_rows - 1; $num_fila >= 0; $num_fila--) {
     $resultado->data_seek($num_fila);

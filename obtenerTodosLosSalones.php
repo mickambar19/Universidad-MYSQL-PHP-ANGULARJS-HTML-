@@ -10,15 +10,14 @@ if(mysqli_connect_errno())
 	printf("La conexion a base de datos a fallado %s\n", mysqli_connect_errno());
 }
 
-if($_GET['nombreParc'] != "")
-{
-	$query = $result->query('SELECT * FROM Empleado INNER JOIN Tipo_Empleado ON IdTipoE=IdTipo WHERE Nombre LIKE "'.$_GET['nombreParc'].'%"');
+
+	$query = $result->query('SELECT * FROM Salon as s INNER JOIN Edificio as e ON s.IdEdificio = e.IdEdificio ');
 	$array = array();
 	while($row = $query->fetch_object())
 	{
 		$array[] = $row;
 	}
 	echo json_encode($array);
-}
+
 
  ?>

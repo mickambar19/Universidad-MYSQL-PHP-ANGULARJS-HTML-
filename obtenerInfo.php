@@ -12,7 +12,7 @@ if(mysqli_connect_errno())
 
 if($_GET['nombreParc'] != "")
 {
-	$query = $result->query('SELECT * FROM Empleado INNER JOIN Tipo_Empleado ON IdTipoE=IdTipo WHERE Nombre LIKE "'.$_GET['nombreParc'].'%"');
+	$query = $result->query('SELECT * FROM Empleado WHERE Nombre LIKE "'.$_GET['nombreParc'].'%"');
 	$array = array();
 	while($row = $query->fetch_object())
 	{
